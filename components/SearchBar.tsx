@@ -21,7 +21,7 @@ const SearchButton = ({otherClasses}:{otherClasses:string}) => (
 )
 
 
-const searchBar = () => {
+const SearchBar = () => {
   const [manufacturer,setManufacturer]= useState('');
   const [model,setModel]=useState('')
  const router = useRouter();
@@ -106,4 +106,4 @@ const updateSearchParams =( model:string,manufacturer:string ) => {
   )
 }
 
-export default searchBar
+export default SearchBar
