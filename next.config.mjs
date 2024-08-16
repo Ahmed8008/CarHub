@@ -2,8 +2,10 @@
 const nextConfig = {
     images:{
         domains:['cdn.imagin.studio']
-    }
-
+    },
+  env: {
+    NEXTAUTH_SECRET: process.env.NEXTAUTH_SECRET,
+  },
     
 };
 
