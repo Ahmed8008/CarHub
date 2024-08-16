@@ -37,16 +37,14 @@ export default async function Home({ searchParams }: HomeProps) {
           <section>
             <div className='home__cars-wrapper'>
               {allCars?.map((car) => (
-                <CarCard car={car} />
+                <CarCard key={car.id} car={car} />
               ))}
             </div>
 
-          
-         <ShowMore
+            <ShowMore
               pageNumber={(searchParams.limit || 10) / 10}
               isNext={(searchParams.limit || 10) > allCars.length}
             />
-
           </section>
         ) : (
           <div className='home__error-container'>
@@ -54,10 +52,6 @@ export default async function Home({ searchParams }: HomeProps) {
             <p>{allCars?.message}</p>
           </div>
         )}
-
-
-
-
       </div>
     </main>
   );
